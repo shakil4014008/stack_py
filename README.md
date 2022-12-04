@@ -24,16 +24,27 @@ class Stack:
 stack = Stack(2)
 stack.pop()
 stack.push(10)
-print(stack.nums)
-stack.push(100)
-print(stack.nums)
-stack.push(200)
-print(stack.nums)
-stack.pop()
-print(stack.nums)
-stack.pop()
-print(stack.nums)
-stack.push(450)
-print(stack.nums)
+print(stack.nums) 
+
+----------------implement stack using queue (deque)
+
+class MyStack:
+    
+    def __init__(self):
+        self.queue = collections.deque([])     
+
+    def push(self, x: int) -> None:
+        self.queue.append(x)
+
+    def pop(self) -> int:
+        return self.queue.pop()
+         
+    def top(self) -> int:
+        return self.queue[len(self.queue)-1]
+
+    def empty(self) -> bool:
+        return len(self.queue) == 0
+        
+        
 
 ````
